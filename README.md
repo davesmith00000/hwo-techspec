@@ -2,7 +2,7 @@
 
 ## The Game
 
-Each team should provide a program (called a "bot") that works as a client for the game server. The game server launches matches of a Pong-like game between competitors. Bot controls a paddle on the game that should prevent ball from exiting the game area through the end of the area guarded by the paddle. When the ball exits through opponent's end a bot wins a game. In a tournament between two bots multiple games can be played and the bot that receives more points wins the tournament.
+Each team should provide a program (called a "bot") that works as a client for the game server. The game server launches matches of a Pong-like game between competitors. The bot controls a paddle on the game that should prevent ball from exiting the game area through the end of the area guarded by the paddle. When the ball exits through opponent's end, the bot wins a game. In a tournament between two bots multiple games can be played and the bot that receives more points wins the tournament.
 
 ![Game visualization](hwo-techspec/raw/master/game-snapshot.png "Game visualization")
 
@@ -29,7 +29,7 @@ This script has to be non-blocking.
 ### Game protocol
 
 - The game protocol consists of JSON messages over TCP/IP
-- Messages are single JSON objects on one line, separated by newlines (`/n`)
+- Messages are single JSON objects on one line, separated by newlines (`\n`)
 - One game message contains fields of `msgType` and `data`
 - The client starts the game with a JOIN message where
   - the msgType is 'join'
@@ -58,7 +58,7 @@ This script has to be non-blocking.
 ~~~
 
 - During the game, client and server communicate with game-specific messages (see 'Game protocol during a match' for more information)
-- The game ends with message contains the name of the winning bot where
+- The game ends with a message containing the name of the winning bot where
   - the msgType is 'gameIsOver'
   - the data contains the name of the winning client
 
