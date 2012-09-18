@@ -39,6 +39,13 @@ This script has to be non-blocking.
      {"msgType":"join","data":"JohnMcEnroe"}
 ~~~
 
+- Alternative way to join a game is to request a duel. Once there are two
+  matching requests the game is started between the two.
+
+~~~ json
+    {"msgType":"requestDuel","data":["mybotname", "requested duel partner's name"]}
+~~~
+
 - Once the client has joined a match the server sends a 'joined' message 
   - the msgType is 'joined'
   - the data is the URL of the game visualization
