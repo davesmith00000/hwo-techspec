@@ -10,7 +10,7 @@ Outside tournaments bots can practice against test opponents on a test server. T
 
 ## Bot requirements
 
-Each bot can send up to 10 messages per second to the game server. Flooding the game server with more messages can result in kicking the bot out of the game and game won by the opposing bot.
+Each bot can send up to 20 messages per 2 seconds to the game server. Flooding the game server with more messages can result in kicking the bot out of the game and game won by the opposing bot.
 
 Each bot should be shipped with three scripts:
 
