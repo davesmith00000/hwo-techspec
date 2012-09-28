@@ -103,6 +103,26 @@ This script has to be non-blocking.
     {"msgType":"changeDir","data":1.0}
 ~~~
 
+Missiles
+
+- Client is notified of an available missile with missileReady msg.
+
+~~~ json
+    {"msgType":"missileReady","data":"1348852336788"}
+~~~
+
+- Client can shoot missiles with launchMissile messages
+
+~~~ json
+   {"msgType":"launchMissile"}
+~~~
+
+- Client is notified of launched missiles with missileLaunched msg
+
+~~~ json
+   {"msgType":"missileLaunched","data":{"code":"iceman_133","pos":{"x":10.0,"y":374.87842794516223},"speed":{"x":8.0,"y":0.0},"launchTime":1348853015606}}
+~~~
+
 ## Testing game server
 
 The testing game server pits a practice bot against any bot that joins. The practice bots might become more challenging as the competition progresses. Teams get to play their bots against each other only in tournament play.
